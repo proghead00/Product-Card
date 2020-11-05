@@ -1,0 +1,359 @@
+@font-face {
+	font-family: "monument_extendedregular";
+	src: url("monumentextended-regular-webfont.woff2") format("woff2"),
+		url("monumentextended-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "monument_extendedultrabold";
+	src: url("monumentextended-ultrabold-webfont.woff2") format("woff2"),
+		url("monumentextended-ultrabold-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/*-------------------------------------------- STYLING -------------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "monument_extendedregular";
+}
+
+.text-1,
+.text-3,
+.text-4,
+.text-8,
+.text-9,
+.text-11 {
+	font-size: 2.2rem;
+	color: rgb(102, 219, 180);
+	/* -webkit-text-stroke: 1px rgb(235, 235, 235); */
+	-webkit-text-stroke: 1px rgb(55, 110, 117);
+}
+.text-6 {
+	font-size: 5rem;
+	color: rgb(36, 66, 83);
+}
+@keyframes blink {
+	0% {
+		opacity: 0%;
+	}
+	1% {
+		opacity: 100%;
+	}
+	99% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.text-1 {
+	animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+	opacity: 0;
+}
+
+.text-2 {
+	animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+	opacity: 0;
+}
+
+.text-3 {
+	animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+	opacity: 0;
+}
+
+.text-4 {
+	animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+	opacity: 0;
+}
+
+.text-5 {
+	animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+	opacity: 0;
+}
+/* 
+.text-6 {
+	animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.5s,
+		slide-out 1s linear 3.2s;
+	opacity: 0;
+} */
+
+.text-7 {
+	animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+	opacity: 0;
+}
+
+.text-8 {
+	animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+	opacity: 0;
+}
+
+.text-9 {
+	animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+	opacity: 0;
+}
+
+.text-10 {
+	animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+	opacity: 0;
+}
+
+.text-11 {
+	animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+	opacity: 0;
+}
+
+@keyframes slide-out {
+	0% {
+		opacity: 0%;
+	}
+	1% {
+		opacity: 100%;
+	}
+
+	19% {
+		opacity: 100%;
+	}
+	20% {
+		opacity: 0%;
+	}
+
+	39% {
+		opacity: 0%;
+	}
+	40% {
+		opacity: 100%;
+	}
+
+	59% {
+		opacity: 100%;
+	}
+	60% {
+		opacity: 0%;
+	}
+
+	79% {
+		opacity: 0%;
+	}
+	80% {
+		opacity: 100%;
+	}
+
+	100% {
+		opacity: 100%;
+	}
+}
+
+@keyframes slide-out-container {
+	0% {
+		height: 100vh;
+	}
+
+	40% {
+		height: 100vh;
+	}
+
+	100% {
+		height: 0%;
+	}
+}
+
+@media (max-width: 990px) {
+	.header {
+		font-size: 24px;
+	}
+
+	.text {
+		font-size: 24px;
+	}
+}
+
+/* -------------------------------------------- CARD    --------------------------------------------*/
+
+:root {
+	/*===== Colores =====*/
+	--first-color: #83ebc8;
+	--white-color: #e9eaec;
+	--dark-color: #272d40;
+	--dark-color-lighten: #f2f5ff;
+
+	--h1-font-size: 1.5rem;
+	--h2-font-size: 1.25rem;
+	--normal-font-size: 1rem;
+	--small-font-size: 0.875rem;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+}
+
+h1,
+p {
+	margin: 0;
+	font-weight: light;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*---------------- CARD ----------------*/
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: var(--dark-color-lighten); */
+	background-color: #c7e7dc;
+}
+
+.card {
+	width: 320px;
+	height: 420px;
+	/* background-color: var(--dark-color); */
+	background-color: rgb(26, 78, 80);
+	border-radius: 5px 53px 33px 5px;
+	padding: 4rem 2rem 0;
+	color: var(--white-color);
+	overflow-y: hidden;
+	box-shadow: 5px 4px 1px 2px rgba(84, 197, 212, 0.8);
+}
+
+.card__img {
+	position: absolute;
+	width: 260px;
+	filter: drop-shadow(5px 10px 15px rgba(10, 11, 19, 0.4));
+}
+
+.card__data {
+	transform: translateY(13.2rem);
+	text-align: center;
+}
+
+.card__title {
+	font-size: var(--h1-font-size);
+	color: var(--first-color);
+	margin-bottom: 0.5rem;
+}
+
+.card__price {
+	display: inline-block;
+	font-size: var(--h2-font-size);
+	font-weight: 500;
+	margin-bottom: 1.25rem;
+}
+
+.card__description {
+	/* font-size: var(--small-font-size);
+	 */
+	font-size: 1rem;
+	text-align: initial;
+	letter-spacing: 0.1em;
+	font-weight: lighter;
+	margin-bottom: 1.25rem;
+	opacity: 0;
+}
+
+.card__button {
+	display: block;
+	width: max-content;
+	padding: 1.125rem 2rem;
+	/* background-color: var(--first-color); */
+	background-color: rgb(46, 148, 139);
+	color: var(--white-color);
+	border-radius: 0.5rem;
+	font-weight: 600;
+	transition: 0.2s;
+	opacity: 0;
+}
+
+.card__button:hover {
+	/* box-shadow: 0 18px 40px -12px rgba(29, 114, 170, 0.35);
+	 */
+	box-shadow: 2px 3px 1px 2px rgba(33, 89, 134, 0.9);
+	color: rgb(13, 35, 56);
+	transition: all 0.2s ease;
+}
+
+.card__img,
+.card__data,
+.card__title,
+.card__price,
+.card__description {
+	transition: 0.5s;
+}
+
+.card:hover .card__img {
+	transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+}
+* {
+	letter-spacing: 0.1rem;
+}
+
+.card:hover .card__data {
+	transform: translateY(4.8rem);
+}
+
+.card:hover .card__title {
+	transform: translateX(-2.3rem);
+	margin-bottom: 0;
+	text-align: left;
+	transition: transform 0.4s ease;
+	margin-left: 1.2rem;
+}
+
+.card:hover .card__price {
+	transform: translateX(-6.8rem);
+	text-align: left;
+}
+
+.card:hover .card__description,
+.card:hover .card__button {
+	transition-delay: 0.1s ease;
+	opacity: 1;
+}
+
+hr {
+	margin-bottom: 1rem;
+	opacity: 0.7;
+	border: 4px solid rgb(120, 255, 255);
+	border-radius: 1px 5px 5px 0px;
+}
+
+/* -------------------------------SCROLLBAR ------------------------------- */
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(40, 190, 158);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #2785d3;
+}
